@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Solution28 {
++ getSum()
+}
+
+@enduml
