@@ -17,7 +17,7 @@ class Solution31Test {
 
     @ParameterizedTest
     @CsvSource({"66, 22, 55"})
-    void Solution31_set1_not_true(int restingPulse, int age, int intensity) {
+    void Solution31_set1_not_true_round_correct(int restingPulse, int age, int intensity) {
         assertNotEquals(Solution31.getTargetHR(restingPulse, age, intensity), 138);
     }
 }

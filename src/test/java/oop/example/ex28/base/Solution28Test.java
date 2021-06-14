@@ -9,9 +9,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Solution28Test {
 
-    @ParameterizedTest
-    @CsvSource({"12, 5, 14, 89, 16"})
-    void checkSolution28True(double sum) {
-        assertEquals(Solution28.getSum(), 12);
+    @Test
+    void getSumAssertTrue() {
+        double sumArray[] = {5, 10, 15, 20, 25.55};
+        int delta;
+        assertEquals(Solution28.getSum(sumArray), 75.55, 0.001);
+    }
+
+    @Test
+    void getSumAssertFalse_No_round() {
+        double sumArray[] = {5, 10, 15, 20, 25.55};
+        int delta;
+        assertNotEquals(Solution28.getSum(sumArray), 75, 0.001);
     }
 }

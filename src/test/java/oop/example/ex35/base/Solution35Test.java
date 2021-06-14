@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.lessThan;
 class Solution35Test {
 
     @Test
-    void randomName_is_true() {
+    void randomName_is_true_in_bounds() {
         ArrayList<String> names = new ArrayList<String>();
         names.add("Jennie");
         names.add("Hera");
@@ -24,7 +24,7 @@ class Solution35Test {
         names.add("Shim Su Ryeon");
 
         int length = names.size();
-        assertThat(Solution35.randomName(names) , allOf(greaterThan(-1), lessThan(length)));;
+        assertThat(Solution35.randomName(names) , allOf(greaterThan(-1), lessThan(length)));
 
     }
 }

@@ -41,12 +41,22 @@ public class Solution36 {
     }
 
     public static double getMax(ArrayList<Double> nums) {
-
-        return Collections.max(nums);
+        double max = Integer.MIN_VALUE;
+        for (int i = 1; i < nums.size(); i++) {
+            if (nums.get(i) > max) {
+                max = nums.get(i);
+            }
+        }
+        return max;
     }
     public static double getMin(ArrayList<Double> nums) {
-
-        return Collections.min(nums);
+        double min = Integer.MAX_VALUE;
+        for (int i = 1; i < nums.size(); i++) {
+            if (nums.get(i) < min) {
+                min = nums.get(i);
+            }
+        }
+        return min;
     }
 
     public static double getAverage(ArrayList<Double> nums) {

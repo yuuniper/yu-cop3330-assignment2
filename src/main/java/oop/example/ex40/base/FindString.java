@@ -1,5 +1,7 @@
 package oop.example.ex40.base;
 
+import oop.example.ex39.base.Solution39;
+
 import java.util.Collection;
 import java.util.Map;
 import java.util.Scanner;
@@ -8,62 +10,45 @@ import static oop.example.ex40.base.Solution40.multimap;
 
 public class FindString {
     private static final Scanner in = new Scanner(System.in);
+
     public void filter() {
         String s = getInput();
-        printMMinterate(s);
+        boolean isMatch = findAndPrintMultiMap(s);
+        //System.out.println(isMatch);
     }
 
-    public static void printMMinterate(String find) {
+    public static boolean findAndPrintMultiMap(String find) {
         System.out.println("Name                | Position          | Separation Date");
         System.out.println("--------------------|-------------------|----------------");
 
-        /*for (Map.Entry<String, Collection<String>> entry :
-                multimap.asMap().entrySet()) {
-            String key = entry.getKey();
-            Collection<String> values = entry.getValue();
-            for (String value : values) {
-                if (value.contains(find) || key.contains(find)){
-                    System.out.print(key + " " + value);
-                }
-            }
-        }*/
-        //System.out.println(multimap.get("Jackson"));
-        int counter = 1;
-        for (Map.Entry<String, String> entry : multimap.entries()) {
-            String key = entry.getKey(), value = entry.getValue();
-            {
-                if (value.contains(find) || key.contains(find)){
-                    if (counter == 1 || counter % 3 == 1){
-                        System.out.print(key + " " + value);
-                    }
-                    //System.out.print(multimap.get(key));
-                }
-                //System.out.println(counter);
-            }
-
-            counter++;
-        }
-        /*int counter = 0;
+        int counter = 0;
+        boolean isMatch = false;
         for (String key : multimap.keySet()) {
-            if (key.contains(find))
-            System.out.print(key + " ");
+            isMatch = false;
             for (String value : multimap.get(key)) {
-                //counter++;
-                if (counter == 1 || counter % 4 == 1){
-                    //System.out.print(value + "|");
-                    //System.out.format(" %-5s |", value);
-                    System.out.format(" %-19s |", value);
-                } else {
-                    System.out.format(" %-12s |", value);
-                }
 
-                //System.out.print(counter);
+                if (value.contains(find) || key.contains(find)){
+                    isMatch = true;
+                    if(counter == 0 || counter % 3 == 0) {
+                        System.out.format("%1$-9s", value); // first name
+                    }
+                    counter++;
+                    if (counter == 1 || counter % 3 == 1) {
+                        System.out.format(" %1$-10s|", key); // last name
+                    } else {
+                        System.out.format(" %1$-17s |", value); // position and separation date
+                    }
+                }
             }
-            System.out.println();*/
+            if (isMatch)
+            {
+                System.out.println();
+            }
+        }
+        return isMatch;
     }
     private String getInput() {
         System.out.print("Enter a search string: ");
         return in.next();
     }
-
 }

@@ -27,4 +27,9 @@ public class GetRInput {
 
         return r;
     }
+
+    public static int getYears(double r) {
+        int years = (int)Math.ceil(72 / r);
+        return years;
+    }
 }

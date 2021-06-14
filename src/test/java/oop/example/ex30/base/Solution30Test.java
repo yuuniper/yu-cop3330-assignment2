@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class Solution30Test {
 
     @Test
-    void printTable() {
+    void printTable_assert_last_num_is_144() {
         assertTrue(Solution30.printTable(12));
     }
 }

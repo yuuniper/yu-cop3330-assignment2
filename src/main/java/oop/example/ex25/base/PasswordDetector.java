@@ -1,4 +1,8 @@
 package oop.example.ex25.base;
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Alice Yu
+ */
 
 public class PasswordDetector {
     public static int passwordValidator(String password){

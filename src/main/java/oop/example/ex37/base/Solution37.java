@@ -24,7 +24,7 @@ public class Solution37 {
         System.out.println("Your password is " + scrambledPass);
     }
 
-    private static String scramble(String unscrambledPass) {
+    public static String scramble(String unscrambledPass) {
         StringBuilder result = new StringBuilder();
         List<String> scrambleMe = Arrays.asList(unscrambledPass.split(""));
         Collections.shuffle(scrambleMe);

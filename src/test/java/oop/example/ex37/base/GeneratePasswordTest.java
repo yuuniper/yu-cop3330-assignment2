@@ -9,15 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class GeneratePasswordTest {
 
     @Test
-    void generateLetters() {
-        assertNotEquals(GeneratePassword.generateLetters(2), " ");
-    }
-
-    @Test
-    void generateNums() {
-    }
-
-    @Test
-    void generateSpecialChar() {
+    void scramble_not_same() {
+        String inOrder = "alphabetSoup123$$%";
+        assertNotEquals(Solution37.scramble(inOrder), inOrder);
     }
 }

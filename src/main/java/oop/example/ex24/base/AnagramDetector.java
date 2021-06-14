@@ -1,4 +1,8 @@
 package oop.example.ex24.base;
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Alice Yu
+ */
 
 import java.util.Arrays;
 import java.util.Locale;
