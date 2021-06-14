@@ -1,4 +1,4 @@
-package oop.example.ex37;
+package oop.example.ex37.base;
 
 import java.util.ArrayList;
 import java.util.Random;

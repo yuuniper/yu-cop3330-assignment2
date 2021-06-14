@@ -1,4 +1,4 @@
-package oop.example.ex34;
+package oop.example.ex34.base;
 
 import java.util.Scanner;
 

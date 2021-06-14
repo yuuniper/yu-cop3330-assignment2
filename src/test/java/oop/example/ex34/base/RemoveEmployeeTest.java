@@ -1,6 +1,5 @@
-package oop.example.ex34;
+package oop.example.ex34.base;
 
-import oop.example.ex31.base.Solution31;
 import org.junit.jupiter.api.Test;
 
 

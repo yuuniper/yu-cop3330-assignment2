@@ -1,9 +1,7 @@
-package oop.example.ex37;
+package oop.example.ex37.base;
 
 import org.junit.jupiter.api.Test;
 
-import static com.google.common.base.CharMatcher.is;
-import static org.hamcrest.Matchers.isEmptyString;
 import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
